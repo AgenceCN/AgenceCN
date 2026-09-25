@@ -1,96 +1,374 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.7">
-  <style type="text/css">
-    body {background-color: #f7f4ec}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000e9; -webkit-text-stroke: #0000e9}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #141414; -webkit-text-stroke: #141414}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #141414; -webkit-text-stroke: #141414; min-height: 14.0px}
-    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Helvetica; color: #141414; -webkit-text-stroke: #141414}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); background-color: #ffffff}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); background-color: #ffffff}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); min-height: 13.0px}
-    span.s1 {text-decoration: underline ; font-kerning: none}
-    span.s2 {font-kerning: none; color: #141414; -webkit-text-stroke: 0px #141414}
-    span.s3 {font-kerning: none; background-color: #b3b3b3}
-    span.s4 {font-kerning: none}
-    span.s5 {font: 12.0px Helvetica; font-kerning: none; color: #141414; -webkit-text-stroke: 0px #141414}
-    span.s6 {font: 11.0px 'Helvetica Neue'; font-kerning: none}
-    span.s7 {font: 11.0px Times; font-kerning: none}
-    span.s8 {font-kerning: none; background-color: #ffffff}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agence CN — Architecture d'Intérieur & Design</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#121212',
+                            card: '#1a1a1a',
+                            cream: '#f4f1ea',
+                            accent: '#c5a059',
+                            muted: '#8e8d8a'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">Agence Clémence NIARD</span></p>
-<p class="p2"><span class="s1">Accueil</span><span class="s2"> </span><span class="s1">Projets</span><span class="s2"> </span><span class="s1">Artisans &amp; Artistes</span><span class="s2"> </span><span class="s1">Journal</span><span class="s2"> </span><span class="s1">Contact</span></p>
-<p class="p3"><span class="s3">Espace Admin</span></p>
-<p class="p4"><span class="s4">Your browser does not support video.</span></p>
-<p class="p5"><span class="s4"></span><br></p>
-<p class="p6"><span class="s4">Architecture d'Intérieur • Haute Couture</span></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Sublimer l'espace,<br>
-révéler l'art de vivre</b></span></h1>
-<p class="p6"><span class="s4">Conception d'espaces résidentiels et commerciaux singuliers. Maîtrise d'œuvre complète et artisanat d'exception.</span></p>
-<p class="p2"><span class="s1">Découvrir les réalisations Prendre rendez-vous</span></p>
-<p class="p4"><span class="s4">Découvrir</span></p>
-<p class="p4"><span class="s4">Portfolio</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nos Projets Récents</b></span></h2>
-<p class="p3"><span class="s3">Tous</span><span class="s5"> </span><span class="s3">Résidentiel</span><span class="s5"> </span><span class="s3">Commercial</span><span class="s5"> </span><span class="s3">Rénovation</span></p>
-<p class="p5"><span class="s4"></span><br></p>
-<p class="p4"><span class="s4">Savoir-Faire &amp; Métiers d'Art</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Artisans &amp; Artistes Partenaires</b></span></h2>
-<p class="p6"><span class="s4">Chaque projet est façonné grâce au talent de nos maîtres artisans, créateurs et artistes sélectionnés pour l'excellence de leur geste.</span></p>
-<p class="p5"><span class="s4"></span><br></p>
-<p class="p4"><span class="s4">Inspirations</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Le Journal du Studio</b></span></h2>
-<p class="p5"><span class="s4"></span><br></p>
-<p class="p4"><span class="s4">Discutons de votre projet</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Confiez-nous vos espaces.</b></span></h2>
-<p class="p6"><span class="s4">Notre équipe vous accompagne de la première esquisse jusqu'à la remise des clés.</span></p>
-<p class="p6"><span class="s4">Normandie, Calvados, Seine Maritime, Eure,<span class="Apple-converted-space"> </span></span></p>
-<p class="p6"><span class="s4">contact@agencecn.fr</span></p>
-<p class="p6"><span class="s4">+33 (0)6 12 21 03 25</span></p>
-<p class="p4"><span class="s4">Nom complet</span></p>
-<p class="p4"><span class="s4">Email</span></p>
-<p class="p4"><span class="s4">Type de projet</span></p>
-<p class="p9"><span class="s6"><span class="Apple-converted-space">                            </span></span><span class="s4">Résidence Principale / Secondaire</span></p>
-<p class="p9"><span class="s6"><span class="Apple-converted-space">                            </span></span><span class="s4">Espace Commercial / Hôtel / Restaurant</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s7">Rénovation Partielle</span></p>
-<p class="p11"><span class="s8"><span class="Apple-converted-space">                        </span></span></p>
-<p class="p4"><span class="s4">Message &amp; Description du besoin</span></p>
-<p class="p3"><span class="s3">Envoyer la demande</span></p>
-<p class="p6"><span class="s4">© 2026 Agence CN. Tous droits réservés.</span></p>
-<p class="p3"><span class="s3">Accès Administration Back-Office</span></p>
-<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Back-Office Admin</b></span></h3>
-<p class="p6"><span class="s4">Gestion des données &amp; mises à jour en direct</span></p>
-<p class="p3"><span class="s3">Projets Artisans Journal / News</span></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Liste des Projets du Portfolio</b></span></h4>
-<p class="p3"><span class="s3">Ajouter un projet</span></p>
-<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Helvetica; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nouveau Projet</b><b></b></span></h5>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s7">Résidentiel</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s7">Commercial</span></p>
-<p class="p10"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s7">Rénovation</span></p>
-<p class="p11"><span class="s8"><span class="Apple-converted-space">                            </span></span></p>
-<p class="p3"><span class="s3">Annuler</span><span class="s5"> </span><span class="s3">Enregistrer le projet</span></p>
-<p class="p5"><span class="s4"></span><br></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Artisans &amp; Artistes Partenaires</b></span></h4>
-<p class="p6"><span class="s4">Gérez les partenaires affichés dans la section dédiée.</span></p>
-<p class="p3"><span class="s3">Ajouter un artisan</span></p>
-<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Helvetica; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nouveau Partenaire</b></span></h5>
-<p class="p5"><span class="s4"></span><br></p>
-<p class="p3"><span class="s3">Annuler</span><span class="s5"> </span><span class="s3">Enregistrer l'artisan</span></p>
-<p class="p5"><span class="s4"></span><br></p>
-<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Articles du Journal &amp; Actualités</b></span></h4>
-<p class="p3"><span class="s3">Rédiger une actualité</span></p>
-<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Helvetica; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nouvel Article</b></span></h5>
-<p class="p5"><span class="s4"></span><br></p>
-<p class="p3"><span class="s3">Annuler</span><span class="s5"> </span><span class="s3">Publier l'actualité</span></p>
-<p class="p5"><span class="s4"></span><br></p>
+<body class="bg-brand-dark text-brand-cream font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-brand-dark/90 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold tracking-wider hover:text-brand-accent transition">
+                AGENCE CN<span class="text-brand-accent">.</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-sm tracking-widest uppercase text-brand-cream/80">
+                <a href="#projets" class="hover:text-brand-accent transition">Réalisations</a>
+                <a href="#studio" class="hover:text-brand-accent transition">Le Studio</a>
+                <a href="#artisans" class="hover:text-brand-accent transition">Artisans & Artistes</a>
+                <a href="#news" class="hover:text-brand-accent transition">Journal</a>
+                <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
+            </div>
+
+            <button onclick="toggleAdminModal()" class="px-4 py-2 border border-brand-accent/50 text-brand-accent hover:bg-brand-accent hover:text-black transition text-xs tracking-widest uppercase font-medium rounded-sm flex items-center gap-2">
+                <i data-lucide="settings" class="w-4 h-4"></i> Espace Admin
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION THÉÂTRALE (VIDÉO D'ACCROCHE) -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay loop muted playsinline class="hero-video-bg opacity-40">
+            <source src="https://player.cloudinary.com/embed/?cloud_name=ljye26cz&public_id=4972699-hd_1920_1080_30fps" type="video/mp4">
+        </video>
+
+        <div class="relative z-10 text-center max-w-4xl px-6">
+            <span class="text-brand-accent text-xs md:text-sm tracking-[0.3em] uppercase mb-4 block font-semibold">Architecture d'Intérieur & Design</span>
+            <h1 class="font-serif text-4xl md:text-7xl font-light leading-tight mb-8">
+                Révéler la poésie des espaces entre <span class="italic font-normal">ancien</span> et <span class="italic font-normal">contemporain</span>.
+            </h1>
+            <p class="text-brand-cream/70 text-base md:text-lg max-w-2xl mx-auto mb-10 font-light">
+                Conception sur-mesure, rénovation de caractère et maîtrise d'œuvre en Normandie et à Paris.
+            </p>
+            <a href="#projets" class="inline-block px-8 py-4 bg-brand-cream text-brand-dark hover:bg-brand-accent hover:text-white transition tracking-widest uppercase text-xs font-semibold">
+                Découvrir nos projets
+            </a>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-center">
+            <a href="#projets" class="text-brand-cream/50 hover:text-brand-accent transition flex flex-col items-center gap-2 text-xs tracking-widest uppercase">
+                Défiler
+                <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS / RÉALISATIONS -->
+    <section id="projets" class="py-28 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-white/10 pb-8">
+            <div>
+                <span class="text-brand-accent text-xs tracking-[0.2em] uppercase font-medium">Portfolio</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-light mt-2">Réalisations Récentes</h2>
+            </div>
+            <p class="text-brand-muted text-sm max-w-md mt-4 md:mt-0">
+                Une harmonie parfaite entre le respect du bâti historique et l'élégance des lignes contemporaines.
+            </p>
+        </div>
+
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Projets injectés dynamiquement -->
+        </div>
+    </section>
+
+    <!-- SECTION LE STUDIO & CLÉMENCE NIARD -->
+    <section id="studio" class="py-28 bg-brand-card px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000" alt="Intérieur fait par Agence CN" class="w-full h-[550px] object-cover rounded-sm filter grayscale hover:grayscale-0 transition duration-700">
+                <div class="absolute -bottom-6 -right-6 bg-brand-dark p-6 border border-white/10 hidden md:block">
+                    <p class="font-serif text-2xl text-brand-accent">Clémence NIARD</p>
+                    <p class="text-xs text-brand-muted uppercase tracking-widest">Fondatrice & Architecte d'Intérieur</p>
+                </div>
+            </div>
+            <div>
+                <span class="text-brand-accent text-xs tracking-[0.2em] uppercase font-medium">Le Studio</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-light mt-2 mb-8">L'Art de Métamorphoser les Lieux</h2>
+                <div class="space-y-6 text-brand-cream/80 text-sm leading-relaxed font-light">
+                    <p>
+                        Basée en <strong class="text-brand-cream font-normal">Normandie</strong>, l'<strong>Agence CN</strong> accompagne une clientèle exigeante dans la restructuration globale et la valorisation d'espaces résidentiels et professionnels.
+                    </p>
+                    <p>
+                        Fondée par <strong>Clémence NIARD</strong>, l'agence puise sa force dans l'art de marier la noblesse de l'ancien (pierres, poutres, moulures, volumes d'époque) au confort épuré du design contemporain.
+                    </p>
+                    <p>
+                        Chaque projet est pensé comme une œuvre singulière, élaborée en synergie avec un réseau sélectionné d'artisans d'art.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ARTISANS & ARTISTES PARTENAIRES -->
+    <section id="artisans" class="py-28 px-6 max-w-7xl mx-auto">
+        <div class="mb-16 border-b border-white/10 pb-8">
+            <span class="text-brand-accent text-xs tracking-[0.2em] uppercase font-medium">Savoir-faire</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-light mt-2">Artisans & Artistes Partenaires</h2>
+            <p class="text-brand-muted text-sm max-w-2xl mt-4">
+                La signature de l'Agence CN repose sur l'excellence du geste. Nous collaborons avec des créateurs et maîtres d'art d'exception.
+            </p>
+        </div>
+
+        <div id="artisans-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Artisans injectés dynamiquement -->
+        </div>
+    </section>
+
+    <!-- SECTION JOURNAL / NEWS -->
+    <section id="news" class="py-28 bg-brand-card px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 border-b border-white/10 pb-8">
+                <span class="text-brand-accent text-xs tracking-[0.2em] uppercase font-medium">Inspirations</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-light mt-2">Le Journal & Actualités</h2>
+            </div>
+            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News injectées dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="py-28 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <span class="text-brand-accent text-xs tracking-[0.2em] uppercase font-medium">Échangeons</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-light mt-2 mb-8">Un Projet en Tête ?</h2>
+                <p class="text-brand-muted text-sm leading-relaxed mb-8">
+                    Confiez-nous la rénovation ou la conception de votre espace en Normandie, à Paris ou en région.
+                </p>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="user" class="w-5 h-5 text-brand-accent"></i>
+                        <span>Clémence NIARD</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-brand-accent"></i>
+                        <span>Normandie, France</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="phone" class="w-5 h-5 text-brand-accent"></i>
+                        <a href="tel:0612210325" class="hover:text-brand-accent transition">06 12 21 03 25</a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message envoyé avec succès !');">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-brand-muted">Votre Nom</label>
+                    <input type="text" required class="w-full bg-brand-card border border-white/10 px-4 py-3 text-sm focus:border-brand-accent outline-none text-white">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-brand-muted">Votre Téléphone / Email</label>
+                    <input type="text" required class="w-full bg-brand-card border border-white/10 px-4 py-3 text-sm focus:border-brand-accent outline-none text-white">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-brand-muted">Votre Projet</label>
+                    <textarea rows="4" required class="w-full bg-brand-card border border-white/10 px-4 py-3 text-sm focus:border-brand-accent outline-none text-white"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 bg-brand-accent text-black font-semibold text-xs tracking-widest uppercase hover:bg-white transition">
+                    Envoyer le Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-12 px-6 text-center text-xs text-brand-muted">
+        <p>© 2026 Agence CN — Clémence NIARD. Tous droits réservés. Normandie, France.</p>
+    </footer>
+
+    <!-- MODAL DASHBOARD ADMIN -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/80 backdrop-blur-lg z-50 hidden flex items-center justify-center p-6">
+        <div class="bg-brand-card border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto p-8 rounded-sm text-brand-cream relative">
+            <button onclick="toggleAdminModal()" class="absolute top-6 right-6 text-brand-muted hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h2 class="font-serif text-2xl font-bold mb-6 text-brand-accent">Interface Administrateur — Agence CN</h2>
+            
+            <div class="space-y-8">
+                <!-- FORMULAIRE PROJET -->
+                <div class="border-b border-white/10 pb-6">
+                    <h3 class="text-sm uppercase tracking-widest mb-4 font-semibold">Ajouter une Réalisation</h3>
+                    <form id="add-project-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" id="proj-title" placeholder="Titre du projet" required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white">
+                        <input type="text" id="proj-cat" placeholder="Catégorie (ex: Rénovation Ancien)" required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white">
+                        <input type="text" id="proj-img" placeholder="URL Image (Unsplash, Cloudinary)" required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white md:col-span-2">
+                        <textarea id="proj-desc" placeholder="Description courte..." required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white md:col-span-2"></textarea>
+                        <button type="submit" class="bg-brand-accent text-black font-semibold py-2 text-xs uppercase tracking-widest hover:bg-white transition md:col-span-2">Ajouter la Réalisation</button>
+                    </form>
+                </div>
+
+                <!-- FORMULAIRE ARTISAN -->
+                <div class="border-b border-white/10 pb-6">
+                    <h3 class="text-sm uppercase tracking-widest mb-4 font-semibold">Ajouter un Artisan / Artiste</h3>
+                    <form id="add-artisan-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" id="art-name" placeholder="Nom de l'artisan ou atelier" required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white">
+                        <input type="text" id="art-trade" placeholder="Spécialité (ex: Ébéniste, Ferronnier)" required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white">
+                        <input type="text" id="art-img" placeholder="URL Photo" required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white md:col-span-2">
+                        <textarea id="art-desc" placeholder="Présentation du savoir-faire..." required class="bg-brand-dark border border-white/10 px-3 py-2 text-sm text-white md:col-span-2"></textarea>
+                        <button type="submit" class="bg-brand-accent text-black font-semibold py-2 text-xs uppercase tracking-widest hover:bg-white transition md:col-span-2">Ajouter l'Artisan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT APPLICATION -->
+    <script>
+        // DONNÉES INITIALES
+        const defaultProjects = [
+            {
+                title: "Corps de Ferme d'Époque",
+                category: "Rénovation Ancien — Normandie",
+                img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=1000",
+                desc: "Restauration d'une bâtisse normande du XVIIIe siècle. Valorisation des charpentes d'origine et intégration de grands volumes épurés."
+            },
+            {
+                title: "Villa Contemporaine Minimaliste",
+                category: "Architecture Moderne",
+                img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1000",
+                desc: "Création d'espaces baignés de lumière avec béton ciré, baies à galandage et mobilier sur-mesure."
+            }
+        ];
+
+        const defaultArtisans = [
+            {
+                name: "Atelier Val-de-Seine",
+                trade: "Ébénisterie d'Art",
+                img: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=1000",
+                desc: "Conception de bibliothèques sur-mesure et restauration de boiseries d'époque."
+            },
+            {
+                name: "Maison Ferronnerie",
+                trade: "Métallerie & Verrières",
+                img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1000",
+                desc: "Verrières de style artiste et garde-corps contemporains réalisés à la main."
+            }
+        ];
+
+        // GESTION DU STORAGE
+        function getData(key, fallback) {
+            const data = localStorage.getItem(key);
+            return data ? JSON.parse(data) : fallback;
+        }
+
+        function saveData(key, data) {
+            localStorage.setItem(key, JSON.stringify(data));
+        }
+
+        // RENDU DYNAMIQUE
+        function render() {
+            const projects = getData('cn_projects', defaultProjects);
+            const artisans = getData('cn_artisans', defaultArtisans);
+
+            // Projets
+            document.getElementById('projects-grid').innerHTML = projects.map(p => `
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden mb-6">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-[400px] object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <span class="text-brand-accent text-xs uppercase tracking-widest">${p.category}</span>
+                    <h3 class="font-serif text-2xl font-light mt-1 mb-2 group-hover:text-brand-accent transition">${p.title}</h3>
+                    <p class="text-brand-muted text-sm">${p.desc}</p>
+                </div>
+            `).join('');
+
+            // Artisans
+            document.getElementById('artisans-grid').innerHTML = artisans.map(a => `
+                <div class="bg-brand-card p-6 border border-white/5">
+                    <img src="${a.img}" alt="${a.name}" class="w-full h-48 object-cover mb-4">
+                    <span class="text-brand-accent text-xs uppercase tracking-widest">${a.trade}</span>
+                    <h3 class="font-serif text-xl font-light mt-1 mb-2">${a.name}</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed">${a.desc}</p>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        // EVENEMENTS MODAL ADMIN
+        function toggleAdminModal() {
+            document.getElementById('admin-modal').classList.toggle('hidden');
+        }
+
+        document.getElementById('add-project-form').onsubmit = (e) => {
+            e.preventDefault();
+            const projects = getData('cn_projects', defaultProjects);
+            projects.unshift({
+                title: document.getElementById('proj-title').value,
+                category: document.getElementById('proj-cat').value,
+                img: document.getElementById('proj-img').value,
+                desc: document.getElementById('proj-desc').value
+            });
+            saveData('cn_projects', projects);
+            render();
+            toggleAdminModal();
+            e.target.reset();
+        };
+
+        document.getElementById('add-artisan-form').onsubmit = (e) => {
+            e.preventDefault();
+            const artisans = getData('cn_artisans', defaultArtisans);
+            artisans.unshift({
+                name: document.getElementById('art-name').value,
+                trade: document.getElementById('art-trade').value,
+                img: document.getElementById('art-img').value,
+                desc: document.getElementById('art-desc').value
+            });
+            saveData('cn_artisans', artisans);
+            render();
+            toggleAdminModal();
+            e.target.reset();
+        };
+
+        // INITIALISATION
+        window.onload = () => {
+            render();
+        };
+    </script>
 </body>
 </html>
