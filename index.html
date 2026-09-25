@@ -1,737 +1,96 @@
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Atelier | Architecture d'Intérieur & Design</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Playfair Display for Lux/Serif & Plus Jakarta Sans for Modern Clean text) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            beige: '#F9F6F0',
-                            sand: '#EFECE6',
-                            taupe: '#D5CEC5',
-                            warmgrey: '#8C857B',
-                            charcoal: '#1A1A1A',
-                            gold: '#C5A059'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #F9F6F0;
-            color: #1A1A1A;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F9F6F0;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D5CEC5;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8C857B;
-        }
-        .serif-title {
-            font-family: 'Playfair Display', serif;
-        }
-        /* Video overlay gradient */
-        .hero-overlay {
-            background: linear-gradient(180deg, rgba(26,26,26,0.4) 0%, rgba(26,26,26,0.6) 100%);
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.7">
+  <style type="text/css">
+    body {background-color: #f7f4ec}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85)}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #141414; -webkit-text-stroke: #141414}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #141414; -webkit-text-stroke: #141414; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Helvetica; color: #141414; -webkit-text-stroke: #141414}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Times; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); background-color: #ffffff}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); background-color: #ffffff}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #000000; color: rgba(0, 0, 0, 0.85); -webkit-text-stroke: rgba(0, 0, 0, 0.85); min-height: 13.0px}
+    span.s1 {text-decoration: underline ; font-kerning: none}
+    span.s2 {font-kerning: none; color: #141414; -webkit-text-stroke: 0px #141414}
+    span.s3 {font-kerning: none; background-color: #b3b3b3}
+    span.s4 {font-kerning: none}
+    span.s5 {font: 12.0px Helvetica; font-kerning: none; color: #141414; -webkit-text-stroke: 0px #141414}
+    span.s6 {font: 11.0px 'Helvetica Neue'; font-kerning: none}
+    span.s7 {font: 11.0px Times; font-kerning: none}
+    span.s8 {font-kerning: none; background-color: #ffffff}
+  </style>
 </head>
-<body class="antialiased selection:bg-brand-gold selection:text-white relative">
-
-    <script>
-        // Initial Mock Data (Saved into LocalStorage if empty)
-        const initialProjects = [
-            {
-                id: '1',
-                title: "Haussmannien Épure",
-                category: "Residentiel",
-                location: "Paris 8ème",
-                year: "2024",
-                image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-                description: "Rénovation complète d'un appartement haussmannien de 180m². Alliance de moulures d'époque et de mobilier contemporain sur mesure en chêne massif."
-            },
-            {
-                id: '2',
-                title: "Boutique Hôtel Mineral",
-                category: "Commercial",
-                location: "Aix-en-Provence",
-                year: "2023",
-                image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-                description: "Conception globale de 12 suites raffinées. Jeux de textures naturelles, travertin, lin brut et luminaires sculpturaux en laiton."
-            },
-            {
-                id: '3',
-                title: "Villa Cap Ferret",
-                category: "Renovation",
-                location: "Bassin d'Arcachon",
-                year: "2024",
-                image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
-                description: "Ouverture des volumes vers la pinède. Utilisation du bois brûlé Shou Sugi Ban et de grandes baies à galandage pour une vie dedans-dehors."
-            }
-        ];
-
-        const initialArtisans = [
-            {
-                id: '1',
-                name: "Atelier Lemaire",
-                specialty: "Ébénisterie d'Art",
-                bio: "Maître ébéniste façonnant des pièces d'exception en bois nobles certifiés depuis plus de 20 ans.",
-                image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80",
-                active: true
-            },
-            {
-                id: '2',
-                name: "Clara Dupont",
-                specialty: "Céramiste & Sculptrice",
-                bio: "Créations en grès et porcelaine modelées à la main pour des pièces uniques intégrées à nos niches architecturales.",
-                image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80",
-                active: true
-            },
-            {
-                id: '3',
-                name: "Maison Ferronnerie",
-                specialty: "Métallerie & Laiton",
-                bio: "Façonnage sur-mesure de verrières, garde-corps et détails décoratifs en laiton brossé et acier patiné.",
-                image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
-                active: true
-            }
-        ];
-
-        const initialNews = [
-            {
-                id: '1',
-                title: "Les tendances matière de la saison 2025",
-                date: "12 Octobre 2024",
-                category: "Tendances",
-                summary: "Focus sur le retour du travertin martelé, la chaleur du noyer et le pouvoir apaisant de la chaux naturelle.",
-                image: "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80"
-            },
-            {
-                id: '2',
-                title: "Coulisses : La restauration d'un hôtel particulier",
-                date: "28 Septembre 2024",
-                category: "Projets",
-                summary: "Découvrez les étapes de préservation du patrimoine sur notre chantier d'exception dans le Marais.",
-                image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
-            }
-        ];
-
-        // Init LocalStorage if not set
-        if (!localStorage.getItem('studio_projects')) {
-            localStorage.setItem('studio_projects', JSON.stringify(initialProjects));
-        }
-        if (!localStorage.getItem('studio_artisans')) {
-            localStorage.setItem('studio_artisans', JSON.stringify(initialArtisans));
-        }
-        if (!localStorage.getItem('studio_news')) {
-            localStorage.setItem('studio_news', JSON.stringify(initialNews));
-        }
-    </script>
-
-    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-beige/90 backdrop-blur-md border-b border-brand-sand/60 py-4 px-6 md:px-12 flex justify-between items-center">
-        <a href="#" class="flex items-center gap-2">
-            <span class="serif-title text-2xl font-bold tracking-widest uppercase text-brand-charcoal">Studio Atelier</span>
-        </a>
-        
-        <div class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold text-brand-charcoal/80">
-            <a href="#hero" class="hover:text-brand-gold transition-colors">Accueil</a>
-            <a href="#projets" class="hover:text-brand-gold transition-colors">Projets</a>
-            <a href="#artisans" class="hover:text-brand-gold transition-colors">Artisans & Artistes</a>
-            <a href="#news" class="hover:text-brand-gold transition-colors">Journal</a>
-            <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
-        </div>
-
-        <div class="flex items-center gap-4">
-            <button onclick="toggleAdminModal()" class="text-xs uppercase tracking-widest px-4 py-2 border border-brand-charcoal text-brand-charcoal hover:bg-brand-charcoal hover:text-white transition-all rounded-full flex items-center gap-2">
-                <i class="fa-solid fa-sliders text-xs"></i> Espace Admin
-            </button>
-        </div>
-    </nav>
-
-    <!-- MAIN CONTAINER (PUBLIC SITE) -->
-    <main id="public-site">
-
-        <section id="hero" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-            <!-- Background HD Architecture/Interior Design Video Loop -->
-            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-with-minimalist-design-41549-large.mp4" type="video/mp4">
-                Your browser does not support video.
-            </video>
-            
-            <!-- Dark Elegant Overlay -->
-            <div class="absolute inset-0 hero-overlay"></div>
-
-            <!-- Hero Content -->
-            <div class="relative z-10 text-center px-6 max-w-4xl mx-auto text-white">
-                <p class="text-xs md:text-sm uppercase tracking-[0.3em] mb-4 text-brand-sand/90">Architecture d'Intérieur • Haute Couture</p>
-                <h1 class="serif-title text-4xl md:text-7xl font-light mb-6 leading-tight">
-                    Sublimer l'espace,<br><span class="italic font-normal">révéler l'art de vivre</span>
-                </h1>
-                <p class="text-sm md:text-base font-light text-brand-sand/80 max-w-xl mx-auto mb-10 leading-relaxed">
-                    Conception d'espaces résidentiels et commerciaux singuliers. Maîtrise d'œuvre complète et artisanat d'exception.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#projets" class="px-8 py-4 bg-brand-beige text-brand-charcoal hover:bg-white text-xs uppercase tracking-widest font-semibold transition-all rounded-full shadow-lg">
-                        Découvrir les réalisations
-                    </a>
-                    <a href="#contact" class="px-8 py-4 border border-white/60 text-white hover:bg-white/10 text-xs uppercase tracking-widest font-semibold transition-all rounded-full">
-                        Prendre rendez-vous
-                    </a>
-                </div>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/60 text-xs uppercase tracking-widest flex flex-col items-center gap-2">
-                <span>Découvrir</span>
-                <i class="fa-solid fa-chevron-down animate-bounce"></i>
-            </div>
-        </section>
-
-        <section id="projets" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-brand-sand pb-8">
-                <div>
-                    <span class="text-xs uppercase tracking-[0.2em] text-brand-warmgrey block mb-2">Portfolio</span>
-                    <h2 class="serif-title text-3xl md:text-5xl font-normal text-brand-charcoal">Nos Projets Récents</h2>
-                </div>
-                <!-- Category Filter Buttons -->
-                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="filter-container">
-                    <button onclick="filterProjects('all')" class="filter-btn active text-xs uppercase tracking-widest px-5 py-2.5 rounded-full bg-brand-charcoal text-white transition-all">Tous</button>
-                    <button onclick="filterProjects('Residentiel')" class="filter-btn text-xs uppercase tracking-widest px-5 py-2.5 rounded-full bg-brand-sand text-brand-charcoal hover:bg-brand-taupe transition-all">Résidentiel</button>
-                    <button onclick="filterProjects('Commercial')" class="filter-btn text-xs uppercase tracking-widest px-5 py-2.5 rounded-full bg-brand-sand text-brand-charcoal hover:bg-brand-taupe transition-all">Commercial</button>
-                    <button onclick="filterProjects('Renovation')" class="filter-btn text-xs uppercase tracking-widest px-5 py-2.5 rounded-full bg-brand-sand text-brand-charcoal hover:bg-brand-taupe transition-all">Rénovation</button>
-                </div>
-            </div>
-
-            <!-- Dynamic Projects Grid -->
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Javascript will inject projects here -->
-            </div>
-        </section>
-
-        <section id="artisans" class="py-24 px-6 md:px-16 bg-brand-sand/50 border-y border-brand-sand">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-[0.2em] text-brand-warmgrey block mb-2">Savoir-Faire & Métiers d'Art</span>
-                    <h2 class="serif-title text-3xl md:text-5xl font-normal text-brand-charcoal mb-4">Artisans & Artistes Partenaires</h2>
-                    <p class="text-sm text-brand-warmgrey leading-relaxed">
-                        Chaque projet est façonné grâce au talent de nos maîtres artisans, créateurs et artistes sélectionnés pour l'excellence de leur geste.
-                    </p>
-                </div>
-
-                <!-- Dynamic Artisans Grid -->
-                <div id="artisans-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Javascript will inject active artisans here -->
-                </div>
-            </div>
-        </section>
-
-        <section id="news" class="py-24 px-6 md:px-16 max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-brand-sand pb-8">
-                <div>
-                    <span class="text-xs uppercase tracking-[0.2em] text-brand-warmgrey block mb-2">Inspirations</span>
-                    <h2 class="serif-title text-3xl md:text-5xl font-normal text-brand-charcoal">Le Journal du Studio</h2>
-                </div>
-            </div>
-
-            <!-- Dynamic News Grid -->
-            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Javascript will inject news articles here -->
-            </div>
-        </section>
-
-        <section id="contact" class="py-24 px-6 md:px-16 bg-brand-charcoal text-white">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <span class="text-xs uppercase tracking-[0.2em] text-brand-gold block mb-2">Discutons de votre projet</span>
-                    <h2 class="serif-title text-4xl md:text-6xl font-light mb-6">Confiez-nous vos espaces.</h2>
-                    <p class="text-brand-taupe text-sm mb-8 leading-relaxed max-w-md">
-                        Notre équipe vous accompagne de la première esquisse jusqu'à la remise des clés.
-                    </p>
-                    
-                    <div class="space-y-4 text-sm text-brand-sand">
-                        <p class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-brand-gold"></i> 14 Rue du Faubourg Saint-Honoré, 75008 Paris</p>
-                        <p class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-gold"></i> contact@studio-atelier.fr</p>
-                        <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-gold"></i> +33 (0)1 42 68 00 00</p>
-                    </div>
-                </div>
-
-                <form onsubmit="handleContactSubmit(event)" class="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest text-brand-taupe mb-2">Nom complet</label>
-                            <input type="text" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold">
-                        </div>
-                        <div>
-                            <label class="block text-xs uppercase tracking-widest text-brand-taupe mb-2">Email</label>
-                            <input type="email" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-brand-taupe mb-2">Type de projet</label>
-                        <select class="w-full bg-brand-charcoal border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold">
-                            <option>Résidence Principale / Secondaire</option>
-                            <option>Espace Commercial / Hôtel / Restaurant</option>
-                            <option>Rénovation Partielle</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-brand-taupe mb-2">Message & Description du besoin</label>
-                        <textarea rows="4" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-gold"></textarea>
-                    </div>
-                    <button type="submit" class="w-full py-4 bg-brand-gold text-brand-charcoal uppercase tracking-widest text-xs font-bold rounded-lg hover:bg-white transition-all">
-                        Envoyer la demande
-                    </button>
-                </form>
-            </div>
-
-            <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-brand-warmgrey gap-4">
-                <p>© 2025 Studio Atelier. Tous droits réservés.</p>
-                <button onclick="toggleAdminModal()" class="hover:text-brand-gold transition-colors">
-                    <i class="fa-solid fa-lock text-xs mr-1"></i> Accès Administration Back-Office
-                </button>
-            </div>
-        </section>
-
-    </main>
-
-    <div id="admin-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 md:p-8">
-        <div class="bg-brand-beige w-full max-w-5xl h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-brand-taupe">
-            
-            <!-- Admin Header -->
-            <div class="bg-brand-charcoal text-white p-6 flex justify-between items-center border-b border-brand-warmgrey">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-sliders text-brand-gold text-xl"></i>
-                    <div>
-                        <h3 class="serif-title text-lg font-bold">Back-Office Admin</h3>
-                        <p class="text-xs text-brand-taupe">Gestion des données & mises à jour en direct</p>
-                    </div>
-                </div>
-                <button onclick="toggleAdminModal()" class="text-brand-taupe hover:text-white text-xl">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-
-            <!-- Admin Navigation Tabs -->
-            <div class="bg-brand-sand px-6 py-3 border-b border-brand-taupe flex space-x-4 text-xs font-semibold uppercase tracking-widest">
-                <button onclick="switchAdminTab('projects')" id="tab-btn-projects" class="px-4 py-2 rounded-lg bg-brand-charcoal text-white transition-all">
-                    <i class="fa-solid fa-compass-drafting mr-2"></i>Projets
-                </button>
-                <button onclick="switchAdminTab('artisans')" id="tab-btn-artisans" class="px-4 py-2 rounded-lg text-brand-charcoal hover:bg-brand-taupe transition-all">
-                    <i class="fa-solid fa-hammer mr-2"></i>Artisans
-                </button>
-                <button onclick="switchAdminTab('news')" id="tab-btn-news" class="px-4 py-2 rounded-lg text-brand-charcoal hover:bg-brand-taupe transition-all">
-                    <i class="fa-solid fa-newspaper mr-2"></i>Journal / News
-                </button>
-            </div>
-
-            <!-- Admin Content Container -->
-            <div class="flex-1 overflow-y-auto p-6">
-                
-                <!-- TAB: PROJECTS -->
-                <div id="admin-tab-projects" class="space-y-6">
-                    <div class="flex justify-between items-center">
-                        <h4 class="serif-title text-xl font-bold">Liste des Projets du Portfolio</h4>
-                        <button onclick="showProjectForm()" class="px-4 py-2 bg-brand-gold text-brand-charcoal text-xs uppercase font-bold rounded-lg hover:bg-brand-charcoal hover:text-white transition-all">
-                            <i class="fa-solid fa-plus mr-1"></i> Ajouter un projet
-                        </button>
-                    </div>
-
-                    <!-- Add Project Form (Hidden by default) -->
-                    <form id="project-form" onsubmit="saveProject(event)" class="hidden bg-white p-6 rounded-xl border border-brand-taupe space-y-4">
-                        <h5 class="font-bold text-sm uppercase tracking-widest text-brand-gold">Nouveau Projet</h5>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" id="p-title" placeholder="Titre du projet" required class="p-3 border rounded-lg text-sm w-full">
-                            <select id="p-category" class="p-3 border rounded-lg text-sm w-full">
-                                <option value="Residentiel">Résidentiel</option>
-                                <option value="Commercial">Commercial</option>
-                                <option value="Renovation">Rénovation</option>
-                            </select>
-                            <input type="text" id="p-location" placeholder="Localisation (ex: Paris)" required class="p-3 border rounded-lg text-sm w-full">
-                            <input type="url" id="p-image" placeholder="URL de l'image (Cloudinary ou Unsplash)" required class="p-3 border rounded-lg text-sm w-full">
-                        </div>
-                        <textarea id="p-description" placeholder="Description courte du projet..." rows="3" required class="p-3 border rounded-lg text-sm w-full"></textarea>
-                        <div class="flex justify-end gap-2">
-                            <button type="button" onclick="hideProjectForm()" class="px-4 py-2 text-xs uppercase border rounded-lg">Annuler</button>
-                            <button type="submit" class="px-4 py-2 text-xs uppercase bg-brand-charcoal text-white rounded-lg font-bold">Enregistrer le projet</button>
-                        </div>
-                    </form>
-
-                    <div id="admin-projects-list" class="space-y-3"></div>
-                </div>
-
-                <!-- TAB: ARTISANS -->
-                <div id="admin-tab-artisans" class="space-y-6 hidden">
-                    <div class="flex justify-between items-center">
-                        <div>
-                            <h4 class="serif-title text-xl font-bold">Artisans & Artistes Partenaires</h4>
-                            <p class="text-xs text-brand-warmgrey">Gérez les partenaires affichés dans la section dédiée.</p>
-                        </div>
-                        <button onclick="showArtisanForm()" class="px-4 py-2 bg-brand-gold text-brand-charcoal text-xs uppercase font-bold rounded-lg hover:bg-brand-charcoal hover:text-white transition-all">
-                            <i class="fa-solid fa-plus mr-1"></i> Ajouter un artisan
-                        </button>
-                    </div>
-
-                    <!-- Add Artisan Form -->
-                    <form id="artisan-form" onsubmit="saveArtisan(event)" class="hidden bg-white p-6 rounded-xl border border-brand-taupe space-y-4">
-                        <h5 class="font-bold text-sm uppercase tracking-widest text-brand-gold">Nouveau Partenaire</h5>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" id="a-name" placeholder="Nom du studio / artisan" required class="p-3 border rounded-lg text-sm w-full">
-                            <input type="text" id="a-specialty" placeholder="Spécialité (ex: Céramiste)" required class="p-3 border rounded-lg text-sm w-full">
-                            <input type="url" id="a-image" placeholder="URL de la photo" required class="p-3 border rounded-lg text-sm w-full">
-                        </div>
-                        <textarea id="a-bio" placeholder="Bio / Descriptif du travail..." rows="3" required class="p-3 border rounded-lg text-sm w-full"></textarea>
-                        <div class="flex justify-end gap-2">
-                            <button type="button" onclick="hideArtisanForm()" class="px-4 py-2 text-xs uppercase border rounded-lg">Annuler</button>
-                            <button type="submit" class="px-4 py-2 text-xs uppercase bg-brand-charcoal text-white rounded-lg font-bold">Enregistrer l'artisan</button>
-                        </div>
-                    </form>
-
-                    <div id="admin-artisans-list" class="space-y-3"></div>
-                </div>
-
-                <!-- TAB: NEWS -->
-                <div id="admin-tab-news" class="space-y-6 hidden">
-                    <div class="flex justify-between items-center">
-                        <h4 class="serif-title text-xl font-bold">Articles du Journal & Actualités</h4>
-                        <button onclick="showNewsForm()" class="px-4 py-2 bg-brand-gold text-brand-charcoal text-xs uppercase font-bold rounded-lg hover:bg-brand-charcoal hover:text-white transition-all">
-                            <i class="fa-solid fa-plus mr-1"></i> Rédiger une actualité
-                        </button>
-                    </div>
-
-                    <!-- Add News Form -->
-                    <form id="news-form" onsubmit="saveNews(event)" class="hidden bg-white p-6 rounded-xl border border-brand-taupe space-y-4">
-                        <h5 class="font-bold text-sm uppercase tracking-widest text-brand-gold">Nouvel Article</h5>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" id="n-title" placeholder="Titre de l'actualité" required class="p-3 border rounded-lg text-sm w-full">
-                            <input type="text" id="n-category" placeholder="Catégorie (ex: Tendances)" required class="p-3 border rounded-lg text-sm w-full">
-                            <input type="url" id="n-image" placeholder="URL d'illustration" required class="p-3 border rounded-lg text-sm w-full">
-                        </div>
-                        <textarea id="n-summary" placeholder="Résumé / Extrait de l'article..." rows="3" required class="p-3 border rounded-lg text-sm w-full"></textarea>
-                        <div class="flex justify-end gap-2">
-                            <button type="button" onclick="hideNewsForm()" class="px-4 py-2 text-xs uppercase border rounded-lg">Annuler</button>
-                            <button type="submit" class="px-4 py-2 text-xs uppercase bg-brand-charcoal text-white rounded-lg font-bold">Publier l'actualité</button>
-                        </div>
-                    </form>
-
-                    <div id="admin-news-list" class="space-y-3"></div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Load Data from LocalStorage
-        function getProjects() { return JSON.parse(localStorage.getItem('studio_projects')) || []; }
-        function getArtisans() { return JSON.parse(localStorage.getItem('studio_artisans')) || []; }
-        function getNews() { return JSON.parse(localStorage.getItem('studio_news')) || []; }
-
-        // Render Functions for Public Site
-        function renderPublicSite() {
-            renderProjects('all');
-            renderArtisans();
-            renderNews();
-        }
-
-        // Render Projects Grid
-        function renderProjects(filterCategory = 'all') {
-            const container = document.getElementById('projects-grid');
-            const projects = getProjects();
-            
-            const filtered = filterCategory === 'all' 
-                ? projects 
-                : projects.filter(p => p.category === filterCategory);
-
-            if(filtered.length === 0) {
-                container.innerHTML = `<p class="col-span-full text-center text-brand-warmgrey py-12 text-sm">Aucun projet dans cette catégorie pour le moment.</p>`;
-                return;
-            }
-
-            container.innerHTML = filtered.map(p => `
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-4 bg-brand-sand">
-                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-brand-beige/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold text-brand-charcoal">
-                            ${p.category}
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-baseline mb-1">
-                        <h3 class="serif-title text-xl font-bold text-brand-charcoal group-hover:text-brand-gold transition-colors">${p.title}</h3>
-                        <span class="text-xs text-brand-warmgrey font-semibold">${p.location}</span>
-                    </div>
-                    <p class="text-xs text-brand-warmgrey line-clamp-2 leading-relaxed">${p.description}</p>
-                </div>
-            `).join('');
-        }
-
-        // Filter Projects Helper
-        function filterProjects(cat) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-charcoal', 'text-white', 'active');
-                btn.classList.add('bg-brand-sand', 'text-brand-charcoal');
-            });
-            event.target.classList.remove('bg-brand-sand', 'text-brand-charcoal');
-            event.target.classList.add('bg-brand-charcoal', 'text-white', 'active');
-            renderProjects(cat);
-        }
-
-        // Render Artisans
-        function renderArtisans() {
-            const container = document.getElementById('artisans-grid');
-            const artisans = getArtisans().filter(a => a.active);
-
-            if(artisans.length === 0) {
-                container.innerHTML = `<p class="col-span-full text-center text-brand-warmgrey py-8 text-sm">Aucun artisan partenaire affiché actuellement.</p>`;
-                return;
-            }
-
-            container.innerHTML = artisans.map(a => `
-                <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-sm hover:shadow-md transition-shadow">
-                    <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-brand-sand">
-                        <img src="${a.image}" alt="${a.name}" class="w-full h-full object-cover">
-                    </div>
-                    <span class="text-[10px] uppercase tracking-widest font-bold text-brand-gold block mb-1">${a.specialty}</span>
-                    <h3 class="serif-title text-xl font-bold text-brand-charcoal mb-2">${a.name}</h3>
-                    <p class="text-xs text-brand-warmgrey leading-relaxed">${a.bio}</p>
-                </div>
-            `).join('');
-        }
-
-        // Render News
-        function renderNews() {
-            const container = document.getElementById('news-grid');
-            const news = getNews();
-
-            container.innerHTML = news.map(n => `
-                <div class="flex flex-col md:flex-row gap-6 items-center bg-white p-6 rounded-2xl border border-brand-sand">
-                    <div class="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden bg-brand-sand flex-shrink-0">
-                        <img src="${n.image}" alt="${n.title}" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-full md:w-1/2">
-                        <span class="text-[10px] uppercase tracking-widest font-bold text-brand-gold block mb-1">${n.category} • ${n.date}</span>
-                        <h3 class="serif-title text-lg font-bold text-brand-charcoal mb-2">${n.title}</h3>
-                        <p class="text-xs text-brand-warmgrey mb-4 line-clamp-3">${n.summary}</p>
-                        <a href="#" class="text-xs uppercase font-bold text-brand-charcoal hover:text-brand-gold transition-colors flex items-center gap-2">
-                            Lire l'article <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function toggleAdminModal() {
-            const modal = document.getElementById('admin-modal');
-            modal.classList.toggle('hidden');
-            if(!modal.classList.contains('hidden')) {
-                renderAdminData();
-            }
-        }
-
-        function switchAdminTab(tab) {
-            document.getElementById('admin-tab-projects').classList.add('hidden');
-            document.getElementById('admin-tab-artisans').classList.add('hidden');
-            document.getElementById('admin-tab-news').classList.add('hidden');
-
-            document.getElementById('tab-btn-projects').className = "px-4 py-2 rounded-lg text-brand-charcoal hover:bg-brand-taupe transition-all";
-            document.getElementById('tab-btn-artisans').className = "px-4 py-2 rounded-lg text-brand-charcoal hover:bg-brand-taupe transition-all";
-            document.getElementById('tab-btn-news').className = "px-4 py-2 rounded-lg text-brand-charcoal hover:bg-brand-taupe transition-all";
-
-            document.getElementById(`admin-tab-${tab}`).classList.remove('hidden');
-            document.getElementById(`tab-btn-${tab}`).className = "px-4 py-2 rounded-lg bg-brand-charcoal text-white transition-all";
-        }
-
-        function renderAdminData() {
-            // Render Projects List in Admin
-            const pList = document.getElementById('admin-projects-list');
-            pList.innerHTML = getProjects().map(p => `
-                <div class="bg-white p-4 rounded-xl border flex justify-between items-center text-sm">
-                    <div class="flex items-center gap-4">
-                        <img src="${p.image}" class="w-12 h-12 rounded-lg object-cover">
-                        <div>
-                            <p class="font-bold">${p.title}</p>
-                            <p class="text-xs text-brand-warmgrey">${p.category} • ${p.location}</p>
-                        </div>
-                    </div>
-                    <button onclick="deleteProject('${p.id}')" class="text-red-500 hover:text-red-700 text-xs font-bold px-3 py-1 bg-red-50 rounded-lg">
-                        Supprimer
-                    </button>
-                </div>
-            `).join('');
-
-            // Render Artisans List in Admin
-            const aList = document.getElementById('admin-artisans-list');
-            aList.innerHTML = getArtisans().map(a => `
-                <div class="bg-white p-4 rounded-xl border flex justify-between items-center text-sm">
-                    <div class="flex items-center gap-4">
-                        <img src="${a.image}" class="w-12 h-12 rounded-lg object-cover">
-                        <div>
-                            <p class="font-bold">${a.name}</p>
-                            <p class="text-xs text-brand-warmgrey">${a.specialty}</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <button onclick="toggleArtisanStatus('${a.id}')" class="text-xs px-3 py-1 rounded-lg ${a.active ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'}">
-                            ${a.active ? 'Actif sur le site' : 'Masqué'}
-                        </button>
-                        <button onclick="deleteArtisan('${a.id}')" class="text-red-500 hover:text-red-700 text-xs font-bold px-2 py-1">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-
-            // Render News List in Admin
-            const nList = document.getElementById('admin-news-list');
-            nList.innerHTML = getNews().map(n => `
-                <div class="bg-white p-4 rounded-xl border flex justify-between items-center text-sm">
-                    <div class="flex items-center gap-4">
-                        <img src="${n.image}" class="w-12 h-12 rounded-lg object-cover">
-                        <div>
-                            <p class="font-bold">${n.title}</p>
-                            <p class="text-xs text-brand-warmgrey">${n.category} • ${n.date}</p>
-                        </div>
-                    </div>
-                    <button onclick="deleteNews('${n.id}')" class="text-red-500 hover:text-red-700 text-xs font-bold px-3 py-1 bg-red-50 rounded-lg">
-                        Supprimer
-                    </button>
-                </div>
-            `).join('');
-        }
-
-        // Show/Hide Forms
-        function showProjectForm() { document.getElementById('project-form').classList.remove('hidden'); }
-        function hideProjectForm() { document.getElementById('project-form').classList.add('hidden'); }
-        function showArtisanForm() { document.getElementById('artisan-form').classList.remove('hidden'); }
-        function hideArtisanForm() { document.getElementById('artisan-form').classList.add('hidden'); }
-        function showNewsForm() { document.getElementById('news-form').classList.remove('hidden'); }
-        function hideNewsForm() { document.getElementById('news-form').classList.add('hidden'); }
-
-        // Save Actions
-        function saveProject(e) {
-            e.preventDefault();
-            const projects = getProjects();
-            const newP = {
-                id: Date.now().toString(),
-                title: document.getElementById('p-title').value,
-                category: document.getElementById('p-category').value,
-                location: document.getElementById('p-location').value,
-                image: document.getElementById('p-image').value,
-                description: document.getElementById('p-description').value
-            };
-            projects.unshift(newP);
-            localStorage.setItem('studio_projects', JSON.stringify(projects));
-            hideProjectForm();
-            renderAdminData();
-            renderPublicSite();
-        }
-
-        function saveArtisan(e) {
-            e.preventDefault();
-            const artisans = getArtisans();
-            const newA = {
-                id: Date.now().toString(),
-                name: document.getElementById('a-name').value,
-                specialty: document.getElementById('a-specialty').value,
-                image: document.getElementById('a-image').value,
-                bio: document.getElementById('a-bio').value,
-                active: true
-            };
-            artisans.unshift(newA);
-            localStorage.setItem('studio_artisans', JSON.stringify(artisans));
-            hideArtisanForm();
-            renderAdminData();
-            renderPublicSite();
-        }
-
-        function saveNews(e) {
-            e.preventDefault();
-            const news = getNews();
-            const newN = {
-                id: Date.now().toString(),
-                title: document.getElementById('n-title').value,
-                category: document.getElementById('n-category').value,
-                date: new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }),
-                image: document.getElementById('n-image').value,
-                summary: document.getElementById('n-summary').value
-            };
-            news.unshift(newN);
-            localStorage.setItem('studio_news', JSON.stringify(news));
-            hideNewsForm();
-            renderAdminData();
-            renderPublicSite();
-        }
-
-        // Delete / Toggle Actions
-        function deleteProject(id) {
-            const updated = getProjects().filter(p => p.id !== id);
-            localStorage.setItem('studio_projects', JSON.stringify(updated));
-            renderAdminData();
-            renderPublicSite();
-        }
-
-        function toggleArtisanStatus(id) {
-            const artisans = getArtisans();
-            const artisan = artisans.find(a => a.id === id);
-            if(artisan) {
-                artisan.active = !artisan.active;
-                localStorage.setItem('studio_artisans', JSON.stringify(artisans));
-                renderAdminData();
-                renderPublicSite();
-            }
-        }
-
-        function deleteArtisan(id) {
-            const updated = getArtisans().filter(a => a.id !== id);
-            localStorage.setItem('studio_artisans', JSON.stringify(updated));
-            renderAdminData();
-            renderPublicSite();
-        }
-
-        function deleteNews(id) {
-            const updated = getNews().filter(n => n.id !== id);
-            localStorage.setItem('studio_news', JSON.stringify(updated));
-            renderAdminData();
-            renderPublicSite();
-        }
-
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            alert("Merci pour votre message. Le studio reviendra vers vous très rapidement.");
-            e.target.reset();
-        }
-
-        // Initialize on load
-        window.onload = function() {
-            renderPublicSite();
-        };
-    </script>
+<body>
+<p class="p1"><span class="s1">Agence Clémence NIARD</span></p>
+<p class="p2"><span class="s1">Accueil</span><span class="s2"> </span><span class="s1">Projets</span><span class="s2"> </span><span class="s1">Artisans &amp; Artistes</span><span class="s2"> </span><span class="s1">Journal</span><span class="s2"> </span><span class="s1">Contact</span></p>
+<p class="p3"><span class="s3">Espace Admin</span></p>
+<p class="p4"><span class="s4">Your browser does not support video.</span></p>
+<p class="p5"><span class="s4"></span><br></p>
+<p class="p6"><span class="s4">Architecture d'Intérieur • Haute Couture</span></p>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Sublimer l'espace,<br>
+révéler l'art de vivre</b></span></h1>
+<p class="p6"><span class="s4">Conception d'espaces résidentiels et commerciaux singuliers. Maîtrise d'œuvre complète et artisanat d'exception.</span></p>
+<p class="p2"><span class="s1">Découvrir les réalisations Prendre rendez-vous</span></p>
+<p class="p4"><span class="s4">Découvrir</span></p>
+<p class="p4"><span class="s4">Portfolio</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nos Projets Récents</b></span></h2>
+<p class="p3"><span class="s3">Tous</span><span class="s5"> </span><span class="s3">Résidentiel</span><span class="s5"> </span><span class="s3">Commercial</span><span class="s5"> </span><span class="s3">Rénovation</span></p>
+<p class="p5"><span class="s4"></span><br></p>
+<p class="p4"><span class="s4">Savoir-Faire &amp; Métiers d'Art</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Artisans &amp; Artistes Partenaires</b></span></h2>
+<p class="p6"><span class="s4">Chaque projet est façonné grâce au talent de nos maîtres artisans, créateurs et artistes sélectionnés pour l'excellence de leur geste.</span></p>
+<p class="p5"><span class="s4"></span><br></p>
+<p class="p4"><span class="s4">Inspirations</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Le Journal du Studio</b></span></h2>
+<p class="p5"><span class="s4"></span><br></p>
+<p class="p4"><span class="s4">Discutons de votre projet</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Confiez-nous vos espaces.</b></span></h2>
+<p class="p6"><span class="s4">Notre équipe vous accompagne de la première esquisse jusqu'à la remise des clés.</span></p>
+<p class="p6"><span class="s4">Normandie, Calvados, Seine Maritime, Eure,<span class="Apple-converted-space"> </span></span></p>
+<p class="p6"><span class="s4">contact@agencecn.fr</span></p>
+<p class="p6"><span class="s4">+33 (0)6 12 21 03 25</span></p>
+<p class="p4"><span class="s4">Nom complet</span></p>
+<p class="p4"><span class="s4">Email</span></p>
+<p class="p4"><span class="s4">Type de projet</span></p>
+<p class="p9"><span class="s6"><span class="Apple-converted-space">                            </span></span><span class="s4">Résidence Principale / Secondaire</span></p>
+<p class="p9"><span class="s6"><span class="Apple-converted-space">                            </span></span><span class="s4">Espace Commercial / Hôtel / Restaurant</span></p>
+<p class="p10"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s7">Rénovation Partielle</span></p>
+<p class="p11"><span class="s8"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p4"><span class="s4">Message &amp; Description du besoin</span></p>
+<p class="p3"><span class="s3">Envoyer la demande</span></p>
+<p class="p6"><span class="s4">© 2026 Agence CN. Tous droits réservés.</span></p>
+<p class="p3"><span class="s3">Accès Administration Back-Office</span></p>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Back-Office Admin</b></span></h3>
+<p class="p6"><span class="s4">Gestion des données &amp; mises à jour en direct</span></p>
+<p class="p3"><span class="s3">Projets Artisans Journal / News</span></p>
+<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Liste des Projets du Portfolio</b></span></h4>
+<p class="p3"><span class="s3">Ajouter un projet</span></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Helvetica; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nouveau Projet</b><b></b></span></h5>
+<p class="p10"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s7">Résidentiel</span></p>
+<p class="p10"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s7">Commercial</span></p>
+<p class="p10"><span class="s4"><span class="Apple-converted-space">                                </span></span><span class="s7">Rénovation</span></p>
+<p class="p11"><span class="s8"><span class="Apple-converted-space">                            </span></span></p>
+<p class="p3"><span class="s3">Annuler</span><span class="s5"> </span><span class="s3">Enregistrer le projet</span></p>
+<p class="p5"><span class="s4"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Artisans &amp; Artistes Partenaires</b></span></h4>
+<p class="p6"><span class="s4">Gérez les partenaires affichés dans la section dédiée.</span></p>
+<p class="p3"><span class="s3">Ajouter un artisan</span></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Helvetica; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nouveau Partenaire</b></span></h5>
+<p class="p5"><span class="s4"></span><br></p>
+<p class="p3"><span class="s3">Annuler</span><span class="s5"> </span><span class="s3">Enregistrer l'artisan</span></p>
+<p class="p5"><span class="s4"></span><br></p>
+<h4 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 12.0px Times; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Articles du Journal &amp; Actualités</b></span></h4>
+<p class="p3"><span class="s3">Rédiger une actualité</span></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Helvetica; color: #141414; -webkit-text-stroke: #141414"><span class="s4"><b>Nouvel Article</b></span></h5>
+<p class="p5"><span class="s4"></span><br></p>
+<p class="p3"><span class="s3">Annuler</span><span class="s5"> </span><span class="s3">Publier l'actualité</span></p>
+<p class="p5"><span class="s4"></span><br></p>
 </body>
 </html>
